@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf "crossorigin="anonymous">                
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="footer.css">
+    <title>Api movies</title>
+</head>
+<body > 
+  <div style="margin:24px">
+        <nav class="navbar navbar-light" style="background-color: #000000;">
+        <div class="container">
+        <a class="navbar-brand" href= "index.html">Inicio</a>
+        <ul class="nav navbar-nav">
+       
+                    
+                        <li>
+                        <a href="formulario.html">Formulario</a>
+                        </li>
+                        <li>
+                        <a href="resultado.html">Resultado</a>
+                        </li>
+                        <li>
+                        <a href="perfil.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="apimovie.html">Peliculas</a>
+                    </li>
+                    <li class="active">
+                    <a href="cuestionario.html">Cuestionario</a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                        <a href="calculadora fisica.html">Fisica</a>
+                    </li>
+                </ul>
+            </div>
+                 
+</nav>
+</div>
+              <h1>Formulario</h1>
+
+    <form id="pedido">
+    <p>Nombre:<input type="text" name="nombre" id="nombre" size="40"> </p>
+    <p>Apellido:<input type="text" name="apellido" id="apellido" size="40"></p>
+    <p>Direccion:<input type="text" name="direccion" id="direccion" size="40"></p>
+    <p>Colonia:<input type="text" name="colonia" id="colonia" size="40"></p>
+    <p>Telefono:<input type="text" name="telefono" id="telefono" size="40"></p>
+    <p>Servilletas: 
+        <input  type="radio" name="servilletas" value="Si"><rosa>Si</rosa></rosa>
+        <input type="radio" name="servilletas" value="No"><morado>No</morado> <br><br>
+
+    <p>QUE VAS A PEDIR :
+                        <select name="menu" id="menu">
+                        <optgroup label="lonches">
+                        <option value="brochetas">brochetas</option>
+                        <option value="camaron empanizado">camaron empanizado</option>
+                        <option value="sushi">Sushi</option>
+                        <option value="coctel de camarones">coctel de camarones</option>
+                        <option value="torta ahogada">torta ahogada</option>
+                        </optgroup>
+                <optgroup label="tacos">
+                <option value=" tacos bistec">tacos bistec</option>
+                <option value="tacos de chicharron">tacos de chicharron</option>
+                <option value="tacos de camaron">tacos de camaron</option>
+                <option value="tacos de trompo">tacos de trompo</option>
+                </optgroup>
+                                </select>
+                                <select name="bebidas" id="bebidas">
+                        <optgroup label="bebidas">
+                        <option value="bebidas">Bebidas</option>
+                        <option value="limonada">limonada</option>
+                        <option value="pina colada">pina colada</option>
+                        <option value="naranjada">naranjada</option>
+                        </optgroup>
+                <optgroup label="Cafeteria">
+                <option value=" cafe con leche">Cafe con leche</option>
+                <option value="cafe expreso">Cafe expresso</option>
+                <option value="ice cafe">Ice cafe</option>
+                <option value="cafe de filtro">cafe de filtro</option>
+                </optgroup>
+                 <optgroup label="Refrescos">
+                <option value=" fanta">fanta</option>
+                <option value="sprite">sprite</option>
+                <option value="coca cola">coca cola</option>
+                <option value="pepsi">pepsi</option>
+                </optgroup>
+                </select>
+                                <hr>
+    <h1 style="color:grey;">Complementos</h1>
+    <input type="checkbox" id="tomate" checked><label for="tomate" style="font-size: 20px;">tomate</label><br>
+    <input type="checkbox" id="cebolla"><label for="cebolla" style="font-size: 20px;">cebolla</label><br>
+    <input type="checkbox" id="pepinillos"><label for="pepinillos" style="font-size: 20px;">pepinillos</label><br>
+    <input type="checkbox" id="ensaladagriega"><label for="ensaladagriega" style="font-size: 20px;">ensaladagriega</label><br>
+    <input type="checkbox" id="guacamole"><label for="guacamole" style="font-size: 20px;">guacamole</label><br>
+    <input type="checkbox" id="arroz"><label for="arroz" style="font-size: 20px;">arroz</label><br>
+    </p>
+                        <input type="submit" value="Enviar"> 
+                        <input type="reset" value="Borrar">
+                                 </form>
+                        <script type="text/javascript">
+                    const form=document.getElementById("pedido");
+                    form.addEventListener("submit",function(event){
+                                    event.preventDefault();
+                                    const formData=new FormData(form);
+                                    const orden={
+                                    nombre:formData.get("nombre"),
+                                    apellido:formData.get("apellido"),
+                                    telefono:formData.get("telefono"),
+                                    direccion:formData.get("direccion"),
+                                    colonia:formData.get("colonia"),
+                                    menu:formData.get("menu"),
+                                    servilletas:formData.get("servilletas"),
+                                    bebidas:formData.get("bebidas"),
+            tomate:document.getElementById("tomate").checked ? "Si":"No",
+            cebolla:document.getElementById("cebolla").checked ? "Si":"No",
+            pepinillos:document.getElementById("pepinillos").checked ? "Si":"No",
+            ensaladagriega:document.getElementById("ensaladagriega").checked ? "Si":"No",
+            guacamole:document.getElementById("guacamole").checked ? "Si":"No",
+        arroz:document.getElementById("arroz").checked ? "Si":"No"
+            
+               };
+localStorage.setItem("orden",JSON.stringify(orden));
+window.location.href="pedidorealizado.html";
+                                     });
+                                 </script>
+                             </p>
+                         </form>
+                     </li>
+                 </ul>
+             </div>
+         </nav>
+     </div>
+</script>
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Contactame</h2>
+                <p>Si estas interesado en contactareme,puedes hacerlo atraves de cualquiera de nuestras redes sociales :</p>
+                <div class="contact-links">
+                    <a href="https://www.facebook.com/miperfil" target="_black">
+                        <i class="fab fa-facebook"></i>
+
+        <a href="https://www.instagram.com/miperfil" target="_black">
+        <i class="fab fa-instagram"></i>
+          <a href="https://www.twitter.com/miperfil" target="_black">
+            <i class="fab fa-twitter"></i>
+            <a href="https://www.snapchat.com/miperfil" target="_black">
+            <i class="fab fa-snapchat"></i>
+            <a href="https://www.youtube.com/miperfil" target="_black">
+            <i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+<script >
+       const socialnetworks = document.querySelectorAll('.contact-links a');
+    socialnetworks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            window.open(link.href, '_blank');
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf "crossorigin="anonymous">
+<link rel="stylesheet"  href="style.css">
+<link rel="stylesheet" href="footer.css">
+<link href="https://fonts.cdnfonts.com/css/avondale-shaded" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="style.css">        
+
+  <title>index</title>
+</head>
+<body>
+  <div style="margin:24px">
+        <nav class="navbar navbar-light" style="background-color: #000000;">
+        <div class="container">
+        <a class="navbar-brand" href= "index.html">Inicio</a>
+        <ul class="nav navbar-nav">
+       
+                    
+                        <li>
+                        <a href="formulario.html">Formulario</a>
+                        </li>
+                        <li>
+                        <a href="resultado.html">Resultado</a>
+                        </li>
+                        <li>
+                        <a href="perfil.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="apimovie.html">Peliculas</a>
+                    </li>
+                    <li class="active">
+                    <a href="cuestionario.html">Cuestionario</a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                        <a href="calculadora fisica.html">Fisica</a>
+                    </li>
+                </ul>
+            </div>
+                 
+</nav>
+</div>
+<style >
+    body{
+    background-color:#25FA0B;
+     background-image: linear-gradient(to left ,purple,blue,white);
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 500px;
+}
+.navnar-stick-static-top{
+    background-color: ;
+    border: none; 
+}
+.titulo{
+    font-family: 'Avondale Shaded', sans-serif;
+    font-size: 40px;
+    align-content: center;
+}
+input: focus{
+    outline: 4px solid blue;
+}
+hr{
+    color: black;
+}
+table{
+    margin-left: 200px;
+}
+table{
+    margin-left: 350px;
+    background-color: ;
+    color: ;
+    text-align: center;
+    width: 700px;
+}
+th{
+    color: black;
+}
+th, td{
+    text-align: left;
+    padding: 8px;
+}
+th{
+background-color: black;
+color: white;
+}
+</style>
+<div style="position:relative; background-color:blue; color:purple;">
+<video autoplay muted preload loop>
+    <source src="mar.mp4"
+    type="video/mp4">
+    
+</video>
+<h1 class="titulo">BIENVENIDOS</h1>
+
+</div>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Contactame</h2>
+                <p>Si estas interesado en contactareme,puedes hacerlo atraves de cualquiera de nuestras redes sociales :</p>
+                <div class="contact-links">
+                    <a href="https://www.facebook.com/miperfil" target="_black">
+                        <i class="fab fa-facebook"></i>
+
+        <a href="https://www.instagram.com/miperfil" target="_black">
+        <i class="fab fa-instagram"></i>
+                        <a href="https://www.twitter.com/miperfil" target="_black">
+                        <i class="fab fa-twitter"></i>
+            <a href="https://www.snapchat.com/miperfil" target="_black">
+            <i class="fab fa-snapchat"></i>
+                        <a href="https://www.youtube.com/miperfil" target="_black">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script type="text/javascript">
+        const socialnetworks=document.querySelectorAll('.contact-links a');
+        socialnetworks.forEach(link=>{
+            link.addEventListener('click',e=>{
+                e.preventDefault();
+                window.open(link.href,'_black');
+    
+            });
+        });
+    </script>
+</footer>
+
+    </body>
+    </html>

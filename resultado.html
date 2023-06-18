@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf "crossorigin="anonymous">    
+<link href="https://fonts.cdnfonts.com/css/ampera" rel="stylesheet">            
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="footer.css">
+    <title>Api movies</title>
+</head>
+<body > 
+   <div style="margin:24px">
+        <nav class="navbar navbar-light" style="background-color: #000000;">
+        <div class="container">
+        <a class="navbar-brand" href= "index.html">Inicio</a>
+        <ul class="nav navbar-nav">
+       
+                    
+                        <li>
+                        <a href="formulario.html">Formulario</a>
+                        </li>
+                        <li>
+                        <a href="resultado.html">Resultado</a>
+                        </li>
+                        <li>
+                        <a href="perfil.html">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="apimovie.html">Peliculas</a>
+                    </li>
+                    <li class="active">
+                    <a href="cuestionario.html">Cuestionario</a>
+                    </li>
+                    <li>
+                        <a href="calculadora.html">Calculadora</a>
+                    </li>
+                    <li>
+                        <a href="calculadora fisica.html">Fisica</a>
+                    </li>
+                </ul>
+            </div>
+                 
+</nav>
+</div>
+     <h1>PEDIDO REALIZADO CON EXITO </h1>
+
+ <ul>
+     <p><strong>Nombre:</strong><span id="nombre"></span></p>
+     <p><strong>Apellido:</strong><span id="apellido"></span></p>
+     <p><strong>Telefono:</strong><span id="telefono"></span></p>
+     <p><strong>Direccion:</strong><span id="direccion"></span></p>
+     <p><strong>Colonia:</strong><span id="colonia"></span></p>
+     <p><strong>Menu:</strong><span id="menu"></span></p>
+     <p><strong>Servilletas:</strong><span id="servilletas"></span></p>
+     <p><strong>Bebidas:</strong><span id="bebidas"></span></p>
+     <p><strong>Tomate:</strong><span id="tomate"></span></p>
+     <p><strong>Cebolla:</strong><span id="cebolla"></span></p>
+     <p><strong>Ensaladagriega:</strong><span id="ensaladagriega"></span></p>
+     <p><strong>Guacamole:</strong><span id="guacamole"></span></p>
+     <p><strong>Arroz:</strong><span id="arroz"></span></p>
+    
+
+     <script type="text/javascript">
+         const orden=JSON.parse(localStorage.getItem("orden"));
+        document.getElementById("nombre").textContent=orden.nombre;
+        document.getElementById("apellido").textContent=orden.apellido;
+        document.getElementById("telefono").textContent=orden.telefono;
+        document.getElementById("direccion").textContent=orden.direccion;
+        document.getElementById("colonia").textContent=orden.colonia;
+        document.getElementById("menu").textContent=orden.menu;
+        document.getElementById("servilletas").textContent=orden.servilletas;
+         document.getElementById("bebidas").textContent=orden.bebidas;
+        document.getElementById("tomate").textContent=orden.tomate;
+        document.getElementById("cebolla").textContent=orden.cebolla;
+         document.getElementById("ensaladagriega").textContent=orden.ensaladagriega;
+          document.getElementById("guacamole").textContent=orden.guacamole;
+        document.getElementById("arroz").textContent=orden.arroz;
+    
+     </script>
+ </ul>
+</script>
+    <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>Contactame</h2>
+                <p>Si estas interesado en contactareme,puedes hacerlo atraves de cualquiera de nuestras redes sociales :</p>
+                <div class="contact-links">
+                    <a href="https://www.facebook.com/miperfil" target="_black">
+                        <i class="fab fa-facebook"></i>
+
+        <a href="https://www.instagram.com/miperfil" target="_black">
+        <i class="fab fa-instagram"></i>
+          <a href="https://www.twitter.com/miperfil" target="_black">
+            <i class="fab fa-twitter"></i>
+            <a href="https://www.snapchat.com/miperfil" target="_black">
+            <i class="fab fa-snapchat"></i>
+            <a href="https://www.youtube.com/miperfil" target="_black">
+            <i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+<script >
+       const socialnetworks = document.querySelectorAll('.contact-links a');
+    socialnetworks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            window.open(link.href, '_blank');
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf "crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="footer.css">
+
+	<title>Footer</title>
+</head>
+<body>
+	<footer>
+	<div class="container">
+		<div class="footer-content">
+			<div class="footer-section about">
+				<h2>Contactame</h2>
+				<p>Si estas interesado en contactareme,puedes hacerlo atraves de cualquiera de nuestras redes sociales :</p>
+				<div class="contact-links">
+					<a href="https://www.facebook.com/miperfil" target="_black">
+						<i class="fab fa-facebook"></i>
+
+		<a href="https://www.instagram.com/miperfil" target="_black">
+		<i class="fab fa-instagram"></i>
+						<a href="https://www.twitter.com/miperfil" target="_black">
+						<i class="fab fa-twitter"></i>
+			<a href="https://www.snapchat.com/miperfil" target="_black">
+			<i class="fab fa-snapchat"></i>
+						<a href="https://www.youtube.com/miperfil" target="_black">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const socialnetworks=document.querySelectorAll('.contact-links a');
+		socialnetworks.forEach(link=>{
+			link.addEventListener('click',e=>{
+				e.preventDefault();
+				window.open(link.href,'_black');
+	
+			});
+		});
+	</script>
+</footer>
+
+
+
+</body>
+</html>
